@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Sabrina Fong
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -40,6 +40,12 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 </script>
 
+//This code draws a filled rectangle.
+function draw_myCanvas(){
+	var myCanvas_canvas = document.getElementById('myCanvas"); //This code finds canvas element in the DOM.
+	var myCanvas_context = myCanvas_canvas.getCOntext('2d"); //This code draws context.
+	myCanvas_context.fillRect( 30, 30, 200, 150); //This code plots rectange at (30, 30) wiht a width of 200 and a height of 150.
+}
 
 
 <style>	
