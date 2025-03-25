@@ -38,8 +38,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-</script>
- 
 
 // This code draws a filled rectangle.
 function draw_myCanvas(){
@@ -69,6 +67,20 @@ function image_myCanvas(){
 	};
 }	
 
+//This code clears the canvas.
+function clear_myCanvas(){
+	var myCanvas_canvas = document.getElementById("myCanvas"); //This code finds canvas element in the DOM.
+	var myCanvas_context = myCanvas_canvas.getContext("2d"); //This code draws context.
+	myCanvas_context.clearRect(0, 0, 400, 400,); //The canvas area of 400  by 400 is cleared.
+}
+
+	
+</script>
+
+
+
+
+	
 <style>	
 .body {
      margin: 0em;
@@ -95,7 +107,26 @@ function image_myCanvas(){
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
+	<br />
+		<!-- This code makes a border on the canvas -->
+		<canvas id ="myCanvas" width="300" height="230" style="border:1px solid #000000;"></canvas>
+
+	<br />
+<div class ="button-container" id="one">
+	<!-- This code creates a button that outputs the rectangle function when clicked. -->
+	<a href="#one" onclick="draw_myCanvas()" class="w3-btn w3-black"> Rectangle </a>
+	
+	<!-- This code creates a button and outputs the name function when clicked. -->
+	<a href="#two" onclick="name_myCanvas()" class="w3-btn w3-black"> My Name </a>
+	
+	<!-- This code creates a button and outputs the image function when clicked. -->
+	<a href="#three" onclick="image_myCanvas()" class="w3-btn w3-black"> Smiski Image </a>
+
+	<!-- This code creates a button and outputs the clear function when clicked. The style maintains a 10px distance for the button. -->
+	<br /> <a href="#four" onclick="clear_myCanvas()" class="w3-btn w3-black" style="margin-top: 10px;"> Clear Canvas </a>
+
+
+</div>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
